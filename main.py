@@ -3,7 +3,6 @@ import re
 from datetime import date
 
 
-
 def filter_notion_db_download(tag_name):
 
     # Define the regular expression pattern to match the <aside> tags and extract their contents
@@ -69,5 +68,4 @@ def filter_notion_db_download(tag_name):
             f.write("\n\n")
 
 
-
-filter_notion_db_download('调查研究')
+#filter_notion_db_download('调查研究')
