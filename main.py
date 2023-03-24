@@ -38,7 +38,7 @@ def filter_notion_db_download(tag_name):
             # Extract all the comments from the file
             comments = []
             for match in aside_pattern.finditer(contents):
-                new_comment = match.group(1).strip().replace('🍀', '').replace('*', '')
+                new_comment = match.group(1).replace('🍀', '').replace('*', '').replace('👉🏻', '').strip()
                 new_comment = re.sub(r"<img[^>]*>", "",  new_comment)
                 comments.append(new_comment )
 
@@ -68,4 +68,4 @@ def filter_notion_db_download(tag_name):
             f.write("\n\n")
 
 
-#filter_notion_db_download('调查研究')
+filter_notion_db_download('调查研究')
